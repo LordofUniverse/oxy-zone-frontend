@@ -100,8 +100,6 @@ const BuyerHome = () => {
 
 	useEffect(() => {
 
-        const val = localStorage.getItem("gid").split(',')
-
         axios.get('http://oxy-zone.herokuapp.com/api/sellers/fulldetails/', )
         .then((data) => process(data))
         .catch((err) => console.log('err:', err))
