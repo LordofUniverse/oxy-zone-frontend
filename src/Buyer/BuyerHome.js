@@ -104,12 +104,6 @@ const BuyerHome = () => {
         .then((data) => process(data))
         .catch((err) => console.log('err:', err))
 
-        //id, name, email, pwd, imgloc, desc
-        setdet([val[0], val[1], val[2], val[3], val[4], val[5]])
-
-        //id, name, email, pwd, imgloc, desc, name, email, pwd, imgloc
-        //setprof([val[0], val[1], val[2], val[3], val[4], val[5], val[1], val[2], val[3], val[4]]) //here, img and desc is not updated
-
     }, [])
 
     const orderlistbydistance = (orderlist) => {
