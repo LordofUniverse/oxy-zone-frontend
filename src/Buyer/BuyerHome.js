@@ -858,7 +858,7 @@ const BuyerHome = () => {
 
                                                                         <Round>
                                                                             <Roundimg
-                                                                            src = {"/media/" + element[9]}
+                                                                            src = { "https://oxy-zone.herokuapp.com/media/" + element[9]}
                                                                             />
                                                                         </ Round>
                                                                         
