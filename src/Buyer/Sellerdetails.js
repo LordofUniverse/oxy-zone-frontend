@@ -45,7 +45,7 @@ function Sellerdetails() {
                 <FullPage>
                     <TopHalf>
                         <Round>
-                            <Roundimg src = { det[2] } />
+                            <Roundimg src = { "https://oxy-zone.herokuapp.com" + det[2] } />
                         </Round>
                         <Name>
                             <P>{ det[0] }</P>
