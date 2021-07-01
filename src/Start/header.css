@@ -1,0 +1,223 @@
+.c2{
+    background-color: #0055a0;
+    height: 60px;
+    width: 145px;
+}
+
+.c1{
+    /* background-color: rgb(37, 39, 40); */
+    height: 60px;
+    width: 175px;
+}
+
+.c{
+    margin-left: 0px;
+    margin-right: 10px;
+    margin-top: 10px;
+    z-index: 5;
+}
+
+.c1:hover{
+    background-color: transparent;
+    color: #ffc107;
+}
+
+.c2:hover{
+    background-color: transparent;
+    border-color: #eff6fd;
+    color: #eff6fd;
+}
+
+#blank{
+    width:80%;
+    height:400px;
+}
+
+.fill {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+    filter: brightness(70%);
+}
+
+.search{
+    position: absolute;
+    border-radius: 20px !important;
+    /* right: 0; */
+    /* width: 400px; */
+    background-color: #F1F1F1;
+    height: 50px;
+    padding-left: 10px;
+    font-size: 25px;
+    width: 355px;
+    /* padding-left:30px; */
+    margin-right :15px;
+    margin-top: -75px;
+}
+
+#map{
+    height: 215px;
+    width: 315px;
+}
+
+.MuiInputBase-root {
+    width: 332px !important;
+    font-size: 21px !important;
+}
+
+.MuiPaper-root{
+    color: rgba(0, 0, 0, 0.87) !important;
+    background-color: #F1F1F1 !important;
+}
+
+.MuiInputBase-input {
+    text-align: center !important;
+}
+
+::-webkit-input-placeholder {
+    text-align: center;
+    font-size: 21px;
+ }
+ 
+ :-moz-placeholder { /* Firefox 18- */
+    text-align: center;  
+    font-size: 21px;
+ }
+ 
+ ::-moz-placeholder {  /* Firefox 19+ */
+    text-align: center;  
+    font-size: 21px;
+ }
+ 
+ :-ms-input-placeholder {  
+    text-align: center; 
+    font-size: 21px;
+ }
+
+.over{
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    bottom: -3px;
+}
+
+#form{
+    box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+    color: rgba(0, 0, 0, 0.87);
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    background-color: #fff;
+}
+
+#inmat{
+    color: rgba(0, 0, 0, 0.87);
+    cursor: text;
+    display: inline-flex;
+    position: relative;
+    font-size: 1rem;
+    box-sizing: border-box;
+    align-items: center;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 1.1876em;
+    letter-spacing: 0.00938em;
+    font-size: 21px;
+    width: 315px;
+    justify-content: space-between;
+
+}
+
+#inp{
+    font: inherit;
+    color: currentColor;
+    width: 100%;
+    border: 0;
+    height: 1.1876em;
+    margin: 0;
+    display: block;
+    padding: 6px 0 7px;
+    min-width: 0;
+    background: none;
+    box-sizing: content-box;
+    animation-name: mui-auto-fill-cancel;
+    letter-spacing: inherit;
+    animation-duration: 10ms;
+    -webkit-tap-highlight-color: transparent;
+    text-align: center;
+}
+
+#inp input::placeholder {
+    text-align: center;
+}  
+
+#inp:focus{
+    outline: 0;
+}
+
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+}
+
+#submit{
+    border: none;
+}
+
+#submit:focus, #submit:visited {
+    border: none;
+    outline: none;
+    text-decoration: none;
+}
+
+#butinp{
+    flex: 0 0 auto;
+    color: rgba(0, 0, 0, 0.54);
+    padding: 12px;
+    overflow: visible;
+    font-size: 1.5rem;
+    text-align: center;
+    transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    border-radius: 50%;
+
+
+    border: 0;
+    margin: 0;
+    display: inline-flex;
+    outline: 0;
+    position: relative;
+    align-items: center;
+    user-select: none;
+    vertical-align: middle;
+    justify-content: center;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+
+    text-transform: none;
+
+    font-family: inherit;
+    line-height: inherit;
+}
+
+#butinp:hover{
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+#span{
+    width: 100%;
+    display: flex;
+    align-items: inherit;
+    justify-content: inherit;
+}
+
+#svg{
+    fill: currentColor;
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    font-size: 1.5rem;
+    transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    flex-shrink: 0;
+    user-select: none;
+
+    vertical-align: middle;
+}

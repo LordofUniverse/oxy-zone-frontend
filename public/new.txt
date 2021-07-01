@@ -1,0 +1,35 @@
+<script>
+    var map = new MapmyIndia.Map("map", {
+      center: [28.09, 78.3],
+      zoom: 5,
+      search: false,
+    });
+
+    var optional_config = { location: [28.61, 77.23] };
+
+    new MapmyIndia.search(
+      document.getElementById("auto"),
+      optional_config,
+      callback
+    );
+
+    var marker;
+
+    function callback(data) {
+      if (data) {
+        var dt = data[0];
+        if (!dt) return false;
+        var eloc = dt.eLoc;
+        var place =
+          dt.placeName + (dt.placeAddress ? ", " + dt.placeAddress : "");
+        if (marker) marker.remove();
+        marker = new MapmyIndia.elocMarker({
+          map: map,
+          eloc: eloc,
+          popupHtml: place,
+          popupOptions: { openPopup: true },
+        }).fitbounds();
+      }
+    }
+    
+  </script>

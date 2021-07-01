@@ -1,0 +1,14 @@
+#makeme2{
+    height: 225px !important;
+    display: flex;
+    flex-direction: column;
+    width: 73% !important;
+    margin-left: 6% !important;
+    /* overflow: inherit !important; */
+}
+
+/* #makeme{
+    width: 73% !important;
+    margin-left: 6% !important;
+    display: flex;
+} */
