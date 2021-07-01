@@ -280,7 +280,7 @@ const SellerHome = () => {
                     location: location,
                     addr: addr,
                     phno: phno,
-                    oxyprice: oxyprice,
+                    oxyprice: parseFloat(oxyprice),
                     id: id,
                 })
                     .then((res) => {
