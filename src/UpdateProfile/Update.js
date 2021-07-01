@@ -368,7 +368,7 @@ const Update = () => {
               />
             ) : (
               <Roundimg
-                src={img}
+                src={"https://oxy-zone.herokuapp.com" + img}
                 onClick={() => {
                   document.getElementById("imageupload").click();
                 }}
