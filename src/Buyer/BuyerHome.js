@@ -844,6 +844,9 @@ const BuyerHome = () => {
                                                 // email,                7
                                                 // desc,                 8
                                                 // profilephoto          9
+						    
+						    console.log('here comes')
+						    console.log("https://oxy-zone.herokuapp.com/media/" + element[9])
                                                     
 
                                                         return (
