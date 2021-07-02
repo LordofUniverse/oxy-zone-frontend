@@ -36,7 +36,7 @@ const App = () => {
           <Header />
         </Route>
         
-        <Route exact path="/mapbox"> 
+        <Route exact path="/map"> 
           <Maptry />
         </Route>
 
