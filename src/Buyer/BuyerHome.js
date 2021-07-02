@@ -898,7 +898,7 @@ const BuyerHome = () => {
 
                                                                                 <Element>
 
-                                                                                    Price:
+                                                                                    Price/Container:
                                                                                 </Element>
                                                                             </Onehalf>
                                                                             <Twohalf>
