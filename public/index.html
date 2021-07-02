@@ -125,9 +125,58 @@
         zoom: 15,
       });
 
-      new mapboxgl.Marker().setLngLat([78.51, 22.22]).addTo(map);
-      new mapboxgl.Marker().setLngLat([76.51, 22.22]).addTo(map);
-      new mapboxgl.Marker().setLngLat([80.51, 22.22]).addTo(map);
+      let retlis = []
+      let fincoor = []
+
+      fetch('http://oxy-zone.herokuapp.com/api/sellers/fulldetails/')
+      .then((resp) => {return resp.json()})
+      .then((data) => {
+        retlis = data.Data
+        
+        retlis.map((ele, ind) => {
+
+          if (ind === retlis.length-1){
+
+            fetch('https://api.mapbox.com/geocoding/v5/mapbox.places/' + ele.location + '.json?access_token=pk.eyJ1IjoibG9yZG9mdW5pdmVyc2UiLCJhIjoiY2tvdGw3ajkwMGNrYTJ4cWp4Mzh5cDBwdyJ9.DeuOLVX7a5ULR1UCGbnHrA')
+            .then((resp) => {return resp.json()})
+            .then((dat) => {
+              
+              fincoor.push(dat.features[0].center)
+              fincoor.map((element) => {
+
+                console.log('checl me:', element)
+                new mapboxgl.Marker().setLngLat(element).addTo(map);
+
+              })
+              
+            })
+            .catch((err) => {
+              console.log(err)
+            })
+
+          } else {
+
+            fetch('https://api.mapbox.com/geocoding/v5/mapbox.places/' + ele.location + '.json?access_token=pk.eyJ1IjoibG9yZG9mdW5pdmVyc2UiLCJhIjoiY2tvdGw3ajkwMGNrYTJ4cWp4Mzh5cDBwdyJ9.DeuOLVX7a5ULR1UCGbnHrA')
+            .then((resp) => {return resp.json()})
+            .then((dat) => {
+              
+              fincoor.push(dat.features[0].center)
+              
+            })
+            .catch((err) => {
+              console.log(err)
+            })
+            
+          }
+
+        })
+        
+      })
+      .catch((err) => {
+        cconsole.log('oops:', err)
+      })
+      
+      // new mapboxgl.Marker().setLngLat([78.51, 22.22]).addTo(map);
 
       const nav = new mapboxgl.NavigationControl();
       const geoco = new MapboxGeocoder({
