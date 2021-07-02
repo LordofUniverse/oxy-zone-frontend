@@ -1195,7 +1195,10 @@ margin-right: 50px;
 
 const Filter = styled.div`
 
+display: flex;
 width: 200px;
+flex-direction: row;
+justify-content: space-between;
 
 `
 
