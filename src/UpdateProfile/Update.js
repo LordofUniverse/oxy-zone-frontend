@@ -311,6 +311,13 @@ const Update = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto">
+    
+              <Nav.Item>
+                <Nav.Link>
+                  <Link to="/home">Home</Link>
+                </Nav.Link>
+              </Nav.Item>
+    
               <Nav.Item>
                 <Nav.Link>
                   <Link to="/vaccinationlist">Vaccination List</Link>
