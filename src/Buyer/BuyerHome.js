@@ -1110,7 +1110,7 @@ margin-left: 25px;
 
 const P = styled.p`
 
-height: 25px;
+height: 50px;
 font-size: 30px;
 
     &:first-letter {
