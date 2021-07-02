@@ -875,7 +875,7 @@ const SellerHome = () => {
 
                                                                             <Element>
 
-                                                                                Price:
+                                                                                Price/Container:
                                                                             </Element>
                                                                         </Onehalf>
                                                                         <Twohalf>
@@ -1240,7 +1240,7 @@ padding-bottom: 10px;
 
 const Element = styled.div`
 
-margin-left: 60px;
+margin-left: 10px;
 // margin-top: 8px;
 display: flex;
 flex-direction: row;
@@ -1295,12 +1295,12 @@ height : 100%;
 
 const Twohalf = styled.div`
 
-width: 61%;
+width: 66%;
 display: flex;
 justify-content: space-around;
 flex-direction: column;
 height : 100%;
-margin-left: -80px;
+margin-left: -35px;
 
 `
 
