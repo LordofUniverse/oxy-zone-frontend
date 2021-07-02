@@ -813,6 +813,17 @@ const BuyerHome = () => {
 
                             </div> 
 
+			   <div class="input-group mb-3">
+
+                                <button
+                                onClick = {() => { 
+                                    history.push('/map')
+                                    window.location.reload()
+                                 }}
+                                class="btn btn-outline-secondary" type="button" aria-expanded="false"> Map </button>
+
+                           </div> 
+
                         </Filter>
 
                     </TopPart>
