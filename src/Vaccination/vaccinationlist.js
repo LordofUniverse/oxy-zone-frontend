@@ -10,23 +10,38 @@ import Card from 'react-bootstrap/Card';
 import img from '../components/cardimg.svg';
 import {Clayout} from '../components/cardlayout'
 
+import './vacc.css'
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const Vaccinationlisting = () => {
 
   const history = useHistory();
   const [pincode,setpincode]=useState('')
   const [centerdata,setcenterdata]=useState([])
   const [date,setdate]=useState('')
+  
+  const notify = (text) => {
+    toast.error(text)
+  };
  
   const handleClick =(event) =>{
   
-    var today = new Date()
-    setdate( today.getDate() + '-' + (today.getMonth() + 1) + '-' + today.getFullYear()) ;
     event.preventDefault();
 
-    let url="https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode="+pincode+"&date="+date
+    var today = new Date()
+    let curdate = today.getDate() + '-' + (today.getMonth() + 1) + '-' + today.getFullYear()
+    
+    setdate(curdate)
+
+    let url="https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode="+pincode+"&date="+curdate
           
     axios.get(url)
     .then((res)=>{
+      if (res.data.sessions.length === 0){
+        notify('We did not get any result. Please try a new pin code')
+      }
       setcenterdata(res.data.sessions)
     })
     
@@ -37,6 +52,8 @@ return(
   <>
 
   <NavigationBar props = {[['Home', '/'], ['Sell Oxygen', '/seller'], ['Contact', '/contact'] ]} />
+
+  <ToastContainer />
   
   <Layout>
   <h1>Search vaccination centers</h1>
