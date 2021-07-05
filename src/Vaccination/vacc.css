@@ -1,0 +1,15 @@
+.position-fixed{
+    z-index: 11;
+}
+
+.Toastify__toast-container{
+    font-size: 12px;
+}
+
+.Toastify__toast{
+    min-height: 50px !important;
+}
+
+.Toastify__toast-container{
+    width: 360px !important;
+}
