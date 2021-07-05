@@ -40,19 +40,26 @@
     filter: brightness(70%);
 }
 
+p{
+    margin-bottom: 0 !important;
+}
+
 .search{
-    position: absolute;
+    /* position: absolute; */
     border-radius: 20px !important;
-    /* right: 0; */
-    /* width: 400px; */
     background-color: #F1F1F1;
     height: 50px;
     padding-left: 10px;
     font-size: 25px;
-    width: 355px;
-    /* padding-left:30px; */
+    width: 395px;
     margin-right :15px;
     margin-top: -75px;
+    display: flex;
+    justify-content: center;
+}
+
+#inmat:hover {
+    cursor: pointer !important;
 }
 
 #map{
@@ -121,7 +128,7 @@
     line-height: 1.1876em;
     letter-spacing: 0.00938em;
     font-size: 21px;
-    width: 315px;
+    width: 380px;
     justify-content: space-between;
 
 }
@@ -159,6 +166,7 @@
 
 #submit{
     border: none;
+    width: 360px;
 }
 
 #submit:focus, #submit:visited {
